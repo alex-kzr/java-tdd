@@ -25,4 +25,11 @@ public class FizzBuzzTest {
         String result = fizzBuzz.check(9);
         Assert.assertEquals("Fizz", result);
     }
+
+    @Test
+    public void shouldReturnValueWhenIsNotIntDivisibleByThreeIsPassed(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.check(2);
+        Assert.assertEquals("2", result);
+    }
 }
