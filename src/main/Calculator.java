@@ -2,6 +2,6 @@ package main;
 
 public class Calculator {
     public int add(int first, int second) {
-        return 0;
+        return first + second;
     }
 }
