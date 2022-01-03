@@ -12,4 +12,10 @@ public class FizzBuzzTest {
         Assert.assertNotNull(fizzBuzz);
     }
 
+    @Test
+    public void shouldReturnFizzWhenIntDivisibleByThreeIsPassed(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.check(3);
+        Assert.assertEquals("Fizz", result);
+    }
 }
