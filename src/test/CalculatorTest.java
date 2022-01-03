@@ -32,4 +32,11 @@ public class CalculatorTest {
         int result = calculator.subtract(3,2);
         Assert.assertEquals(1, result);
     }
+
+    @Test
+    public void shouldReturnMinusOneWhenNegativeThreeSubtractNegativeTwoIsCalled(){
+        Calculator calculator = new Calculator();
+        int result = calculator.subtract(-3,-2);
+        Assert.assertEquals(-1, result);
+    }
 }
