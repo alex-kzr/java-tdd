@@ -18,4 +18,11 @@ public class FizzBuzzTest {
         String result = fizzBuzz.check(3);
         Assert.assertEquals("Fizz", result);
     }
+
+    @Test
+    public void shouldReturnFizzWhenIntDivisibleByThreeIsPassed_2(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.check(9);
+        Assert.assertEquals("Fizz", result);
+    }
 }
