@@ -6,6 +6,6 @@ public class Calculator {
     }
 
     public int subtract(int first, int second) {
-        return 0;
+        return first - second;
     }
 }
