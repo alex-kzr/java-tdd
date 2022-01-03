@@ -11,4 +11,11 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         Assert.assertNotNull(calculator);
     }
+
+    @Test
+    public void shouldReturnTwoWhenOnePlusOneIsCalled(){
+        Calculator calculator = new Calculator();
+        int result = calculator.add(1, 1);
+        Assert.assertEquals(2, result);
+    }
 }
