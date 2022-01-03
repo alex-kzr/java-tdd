@@ -25,4 +25,11 @@ public class CalculatorTest {
         int result = calculator.add(-1, -1);
         Assert.assertEquals(-2, result);
     }
+
+    @Test
+    public void shouldReturnOneWhenThreeSubtractTwoIsCalled(){
+        Calculator calculator = new Calculator();
+        int result = calculator.subtract(3,2);
+        Assert.assertEquals(1, result);
+    }
 }
