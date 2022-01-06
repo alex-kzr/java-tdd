@@ -13,7 +13,7 @@ public class CalculatorTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void shouldThrowAnExceptionWhenThreeDecimalPlaceValuePassed(){
+    public void shouldThrowAnExceptionWhenThreeDecimalPlaceValuePassedToAddMethod(){
         Calculator calculator = new Calculator();
         calculator.add("1.11","1.111");
     }
@@ -30,6 +30,12 @@ public class CalculatorTest {
         Calculator calculator = new Calculator();
         String result = calculator.add("-1.11", "-1.11");
         Assert.assertEquals("-2.22", result);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowAnExceptionWhenThreeDecimalPlaceValuePassedToSubtractMethod(){
+        Calculator calculator = new Calculator();
+        calculator.subtract("1.11","1.111");
     }
 
     @Test
