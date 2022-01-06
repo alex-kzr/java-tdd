@@ -12,6 +12,12 @@ public class CalculatorTest {
         Assert.assertNotNull(calculator);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowAnExceptionWhenThreeDecimalPlaceValuePassed(){
+        Calculator calculator = new Calculator();
+        calculator.add("1.11","1.111");
+    }
+
     @Test
     public void shouldReturnTwoWhenOnePlusOneIsCalled(){
         Calculator calculator = new Calculator();
