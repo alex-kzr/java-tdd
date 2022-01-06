@@ -39,4 +39,11 @@ public class FizzBuzzTest {
         String result = fizzBuzz.check(5);
         Assert.assertEquals("Buzz", result);
     }
+
+    @Test
+    public void shouldReturnBuzzWhenIsDiversibleByFiveIsPassed_2(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.check(10);
+        Assert.assertEquals("Buzz", result);
+    }
 }
