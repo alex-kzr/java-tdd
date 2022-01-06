@@ -17,4 +17,8 @@ public class Calculator {
     public int subtract(int first, int second) {
         return first - second;
     }
+
+    public String subtractStrings(String first, String second) {
+        return null;
+    }
 }
