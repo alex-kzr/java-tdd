@@ -15,14 +15,14 @@ public class CalculatorTest {
     @Test
     public void shouldReturnTwoWhenOnePlusOneIsCalled(){
         Calculator calculator = new Calculator();
-        String result = calculator.addStrings("1.11", "1.11");
+        String result = calculator.add("1.11", "1.11");
         Assert.assertEquals("2.22", result);
     }
 
     @Test
     public void shouldReturnNegativeTwoWhenNegativeOnePlusNegativeOneIsCalled(){
         Calculator calculator = new Calculator();
-        String result = calculator.addStrings("-1.11", "-1.11");
+        String result = calculator.add("-1.11", "-1.11");
         Assert.assertEquals("-2.22", result);
     }
 

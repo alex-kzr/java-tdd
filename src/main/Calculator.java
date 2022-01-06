@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class Calculator {
 
-    public String addStrings(String first, String second) {
+    public String add(String first, String second) {
         return new BigDecimal(first).add(new BigDecimal(second)).toString();
     }
 
