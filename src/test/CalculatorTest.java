@@ -15,8 +15,8 @@ public class CalculatorTest {
     @Test
     public void shouldReturnTwoWhenOnePlusOneIsCalled(){
         Calculator calculator = new Calculator();
-        int result = calculator.add(1, 1);
-        Assert.assertEquals(2, result);
+        String result = calculator.addStrings("1.11", "1.11");
+        Assert.assertEquals("2.22", result);
     }
 
     @Test
