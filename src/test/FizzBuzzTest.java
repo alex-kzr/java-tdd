@@ -34,16 +34,23 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void shouldReturnBuzzWhenIsDiversibleByFiveIsPassed(){
+    public void shouldReturnBuzzWhenIsDivisibleByFiveIsPassed(){
         FizzBuzz fizzBuzz = new FizzBuzz();
         String result = fizzBuzz.check(5);
         Assert.assertEquals("Buzz", result);
     }
 
     @Test
-    public void shouldReturnBuzzWhenIsDiversibleByFiveIsPassed_2(){
+    public void shouldReturnBuzzWhenIsDivisibleByFiveIsPassed_2(){
         FizzBuzz fizzBuzz = new FizzBuzz();
         String result = fizzBuzz.check(10);
         Assert.assertEquals("Buzz", result);
+    }
+
+    @Test
+    public void shouldReturnFizzBuzzWhenIsDivisibleByThreeAndFiveIsPassed(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.check(15);
+        Assert.assertEquals("FizzBuzz", result);
     }
 }
