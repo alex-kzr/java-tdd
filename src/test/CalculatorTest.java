@@ -35,14 +35,14 @@ public class CalculatorTest {
     @Test
     public void shouldReturnOneWhenThreeSubtractTwoIsCalled(){
         Calculator calculator = new Calculator();
-        String result = calculator.subtractStrings("3.33","2.22");
+        String result = calculator.subtract("3.33","2.22");
         Assert.assertEquals("1.11", result);
     }
 
     @Test
     public void shouldReturnMinusOneWhenNegativeThreeSubtractNegativeTwoIsCalled(){
         Calculator calculator = new Calculator();
-        String result = calculator.subtractStrings("-3.33","-2.22");
+        String result = calculator.subtract("-3.33","-2.22");
         Assert.assertEquals("-1.11", result);
     }
 }
