@@ -19,6 +19,6 @@ public class Calculator {
     }
 
     public String subtractStrings(String first, String second) {
-        return null;
+        return new BigDecimal(first).subtract(new BigDecimal(second)).toString();
     }
 }
