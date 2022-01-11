@@ -25,4 +25,10 @@ public class ValidationTest {
         List<String> errors = validation.validate("1.11", "2.22");
         Assert.assertTrue(errors.isEmpty());
     }
+
+    @Test
+    public void shouldReturnOneErrorInListWhenOneErrorDecimalPassedIn() {
+        List<String> errors = validation.validate("1.111");
+        Assert.assertEquals(1, errors.size());
+    }
 }
