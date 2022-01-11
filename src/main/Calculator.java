@@ -34,7 +34,7 @@ public class Calculator {
         return firstValue.multiply(secondValue).toString();
     }
 
-    public String divide(String s, String s1) {
-        return null;
+    public String divide(String first, String second) {
+        return new BigDecimal(first).divide(new BigDecimal(second)).toString();
     }
 }
