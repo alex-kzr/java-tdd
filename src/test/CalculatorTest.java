@@ -54,12 +54,12 @@ public class CalculatorTest {
 
     @Test
     public void shouldReturn4When2Times2IsCalled(){
-        String result = calculator.myltiply("2", "2");
+        String result = calculator.multiply("2", "2");
         Assert.assertEquals("4", result);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowAnExceptionWhenThreeDecimalPlaceValuePassedToMultiplyMethod(){
-        calculator.myltiply("1.11","1.111");
+        calculator.multiply("1.11","1.111");
     }
 }
