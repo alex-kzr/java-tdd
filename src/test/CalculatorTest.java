@@ -2,52 +2,52 @@ package test;
 
 import main.Calculator;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class CalculatorTest {
+    private Calculator calculator;
+
+    @Before
+    public void setUp() {
+        calculator = new Calculator();
+    }
 
     @Test
     public void shouldReturnAnInstanceOfACalculator(){
-        Calculator calculator = new Calculator();
         Assert.assertNotNull(calculator);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowAnExceptionWhenThreeDecimalPlaceValuePassedToAddMethod(){
-        Calculator calculator = new Calculator();
         calculator.add("1.11","1.111");
     }
 
     @Test
     public void shouldReturnTwoWhenOnePlusOneIsCalled(){
-        Calculator calculator = new Calculator();
         String result = calculator.add("1.11", "1.11");
         Assert.assertEquals("2.22", result);
     }
 
     @Test
     public void shouldReturnNegativeTwoWhenNegativeOnePlusNegativeOneIsCalled(){
-        Calculator calculator = new Calculator();
         String result = calculator.add("-1.11", "-1.11");
         Assert.assertEquals("-2.22", result);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowAnExceptionWhenThreeDecimalPlaceValuePassedToSubtractMethod(){
-        Calculator calculator = new Calculator();
         calculator.subtract("1.11","1.111");
     }
 
     @Test
     public void shouldReturnOneWhenThreeSubtractTwoIsCalled(){
-        Calculator calculator = new Calculator();
         String result = calculator.subtract("3.33","2.22");
         Assert.assertEquals("1.11", result);
     }
 
     @Test
     public void shouldReturnMinusOneWhenNegativeThreeSubtractNegativeTwoIsCalled(){
-        Calculator calculator = new Calculator();
         String result = calculator.subtract("-3.33","-2.22");
         Assert.assertEquals("-1.11", result);
     }
