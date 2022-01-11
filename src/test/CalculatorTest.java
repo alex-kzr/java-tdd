@@ -57,4 +57,9 @@ public class CalculatorTest {
         String result = calculator.myltiply("2", "2");
         Assert.assertEquals("4", result);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowAnExceptionWhenThreeDecimalPlaceValuePassedToMultiplyMethod(){
+        calculator.myltiply("1.11","1.111");
+    }
 }
