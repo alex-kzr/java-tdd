@@ -4,6 +4,12 @@ import java.math.BigDecimal;
 
 public class Calculator {
 
+    private Validation validation;
+
+    public Calculator(Validation validation) {
+        this.validation = validation;
+    }
+
     public String add(String first, String second) {
         BigDecimal firstValue = new BigDecimal(first);
         BigDecimal secondValue = new BigDecimal(second);

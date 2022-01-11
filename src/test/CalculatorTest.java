@@ -1,16 +1,19 @@
 package test;
 
 import main.Calculator;
+import main.Validation;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class CalculatorTest {
     private Calculator calculator;
+    private Validation validation;
 
     @Before
     public void setUp() {
-        calculator = new Calculator();
+        validation = new Validation();
+        calculator = new Calculator(validation);
     }
 
     @Test
