@@ -30,5 +30,6 @@ public class ValidationTest {
     public void shouldReturnOneErrorInListWhenOneErrorDecimalPassedIn() {
         List<String> errors = validation.validate("1.111");
         Assert.assertEquals(1, errors.size());
+        Assert.assertEquals("Too many decimal places for value 1.111", errors.get(0));
     }
 }
