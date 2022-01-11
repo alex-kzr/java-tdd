@@ -35,6 +35,12 @@ public class Calculator {
     }
 
     public String divide(String first, String second) {
-        return new BigDecimal(first).divide(new BigDecimal(second)).toString();
+        BigDecimal firstValue = new BigDecimal(first);
+        BigDecimal secondValue = new BigDecimal(second);
+
+        if(firstValue.scale() > 2 || secondValue.scale() >2 ){
+            throw new IllegalArgumentException("Too many decimal places.");
+        }
+        return firstValue.divide(secondValue).toString();
     }
 }
