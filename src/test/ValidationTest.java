@@ -32,4 +32,12 @@ public class ValidationTest {
         Assert.assertEquals(1, errors.size());
         Assert.assertEquals("Too many decimal places for value 1.111", errors.get(0));
     }
+
+    @Test
+    public void shouldReturnTwoErrorsInListWhenTwoErrorDecimalsPassedIn() {
+        List<String> errors = validation.validate("1.111", "2.222");
+        Assert.assertEquals(2, errors.size());
+        Assert.assertEquals("Too many decimal places for value 1.111", errors.get(0));
+        Assert.assertEquals("Too many decimal places for value 2.222", errors.get(1));
+    }
 }
