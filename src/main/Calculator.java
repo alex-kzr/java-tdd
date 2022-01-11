@@ -1,6 +1,7 @@
 package main;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 
 public class Calculator {
@@ -31,7 +32,7 @@ public class Calculator {
             throw new IllegalArgumentException("Cannot divide by zero.");
         }
         validateDecimals(first, second);
-        return new BigDecimal(first).divide(new BigDecimal(second)).toString();
+        return new BigDecimal(first).divide(new BigDecimal(second), 2, RoundingMode.HALF_UP).toString();
     }
 
     private void validateDecimals(String... values){
