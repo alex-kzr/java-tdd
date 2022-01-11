@@ -1,6 +1,7 @@
 package main;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 public class Calculator {
 
@@ -11,13 +12,13 @@ public class Calculator {
     }
 
     public String add(String first, String second) {
-        BigDecimal firstValue = new BigDecimal(first);
-        BigDecimal secondValue = new BigDecimal(second);
+        List<String> errors = this.validation.validate(first, second);
 
-        if(firstValue.scale() > 2 || secondValue.scale() >2 ){
-            throw new IllegalArgumentException("Too many decimal places.");
+        if(!errors.isEmpty()) {
+            throw new IllegalArgumentException(errors.toString());
         }
-        return firstValue.add(secondValue).toString();
+
+        return new BigDecimal(first).add(new BigDecimal(second)).toString();
     }
 
     public String subtract(String first, String second) {
