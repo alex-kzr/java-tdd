@@ -17,37 +17,21 @@ public class Calculator {
     }
 
     public String subtract(String first, String second) {
-        BigDecimal firstValue = new BigDecimal(first);
-        BigDecimal secondValue = new BigDecimal(second);
-
-        if(firstValue.scale() > 2 || secondValue.scale() >2 ){
-            throw new IllegalArgumentException("Too many decimal places.");
-        }
-        return firstValue.subtract(secondValue).toString();
+        validateDecimals(first, second);
+        return new BigDecimal(first).subtract(new BigDecimal(second)).toString();
     }
 
     public String multiply(String first, String second) {
-        BigDecimal firstValue = new BigDecimal(first);
-        BigDecimal secondValue = new BigDecimal(second);
-
-        if(firstValue.scale() > 2 || secondValue.scale() >2 ){
-            throw new IllegalArgumentException("Too many decimal places.");
-        }
-        return firstValue.multiply(secondValue).toString();
+        validateDecimals(first, second);
+        return new BigDecimal(first).multiply(new BigDecimal(second)).toString();
     }
 
     public String divide(String first, String second) {
-        BigDecimal firstValue = new BigDecimal(first);
-        BigDecimal secondValue = new BigDecimal(second);
-
-        if(secondValue.equals(BigDecimal.ZERO)){
+        if(new BigDecimal(second).equals(BigDecimal.ZERO)){
             throw new IllegalArgumentException("Cannot divide by zero.");
         }
-
-        if(firstValue.scale() > 2 || secondValue.scale() >2 ){
-            throw new IllegalArgumentException("Too many decimal places.");
-        }
-        return firstValue.divide(secondValue).toString();
+        validateDecimals(first, second);
+        return new BigDecimal(first).divide(new BigDecimal(second)).toString();
     }
 
     private void validateDecimals(String... values){
