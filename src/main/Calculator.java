@@ -12,12 +12,7 @@ public class Calculator {
     }
 
     public String add(String first, String second) {
-        List<String> errors = this.validation.validate(first, second);
-
-        if(!errors.isEmpty()) {
-            throw new IllegalArgumentException(errors.toString());
-        }
-
+        validateDecimals(first, second);
         return new BigDecimal(first).add(new BigDecimal(second)).toString();
     }
 
@@ -53,5 +48,13 @@ public class Calculator {
             throw new IllegalArgumentException("Too many decimal places.");
         }
         return firstValue.divide(secondValue).toString();
+    }
+
+    private void validateDecimals(String... values){
+        List<String> errors = this.validation.validate(values);
+
+        if(!errors.isEmpty()) {
+            throw new IllegalArgumentException(errors.toString());
+        }
     }
 }
