@@ -73,4 +73,9 @@ public class CalculatorTest {
     public void shouldThrowAnExceptionWhenThreeDecimalPlaceValuePassedToDivideMethod(){
         calculator.divide("1.11","1.111");
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowAnExceptionWhenSecondValueIsZeroToDivideMethodIsPassed(){
+        calculator.divide("1.11","0");
+    }
 }
