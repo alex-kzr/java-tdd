@@ -62,4 +62,10 @@ public class CalculatorTest {
     public void shouldThrowAnExceptionWhenThreeDecimalPlaceValuePassedToMultiplyMethod(){
         calculator.multiply("1.11","1.111");
     }
+
+    @Test
+    public void shouldReturn2When4DividedBy2IsCalled(){
+        String result = calculator.divide("4", "2");
+        Assert.assertEquals("2", result);
+    }
 }

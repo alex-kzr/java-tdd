@@ -33,4 +33,8 @@ public class Calculator {
         }
         return firstValue.multiply(secondValue).toString();
     }
+
+    public String divide(String s, String s1) {
+        return null;
+    }
 }
