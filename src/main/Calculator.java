@@ -25,6 +25,6 @@ public class Calculator {
     }
 
     public String myltiply(String first, String second) {
-        return null;
+        return new BigDecimal(first).multiply(new BigDecimal(second)).toString();
     }
 }
