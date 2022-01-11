@@ -72,6 +72,12 @@ public class CalculatorTest {
         Assert.assertEquals("2", result);
     }
 
+    @Test
+    public void shouldReturnDecimalWhenDividedWithRemainder(){
+        String result = calculator.divide("10", "3");
+        Assert.assertEquals("3.33", result);
+    }
+
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowAnExceptionWhenThreeDecimalPlaceValuePassedToDivideMethod(){
         calculator.divide("1.11","1.111");
