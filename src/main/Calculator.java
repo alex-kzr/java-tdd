@@ -23,4 +23,8 @@ public class Calculator {
         }
         return firstValue.subtract(secondValue).toString();
     }
+
+    public String myltiply(String first, String second) {
+        return null;
+    }
 }

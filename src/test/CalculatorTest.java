@@ -51,4 +51,10 @@ public class CalculatorTest {
         String result = calculator.subtract("-3.33","-2.22");
         Assert.assertEquals("-1.11", result);
     }
+
+    @Test
+    public void shouldReturn4When2Times2IsCalled(){
+        String result = calculator.myltiply("2", "2");
+        Assert.assertEquals("4", result);
+    }
 }
