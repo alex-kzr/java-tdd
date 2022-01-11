@@ -68,4 +68,9 @@ public class CalculatorTest {
         String result = calculator.divide("4", "2");
         Assert.assertEquals("2", result);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowAnExceptionWhenThreeDecimalPlaceValuePassedToDivideMethod(){
+        calculator.divide("1.11","1.111");
+    }
 }
