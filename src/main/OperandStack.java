@@ -18,6 +18,8 @@ public class OperandStack {
         values.push(value);
     }
 
-    public void replaceTop(BigDecimal newValue) {
+    public void replaceTop(BigDecimal value) {
+        values.pop();
+        values.push(value);
     }
 }
