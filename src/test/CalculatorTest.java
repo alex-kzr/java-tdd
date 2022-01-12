@@ -1,11 +1,13 @@
 package test;
 
 import main.Calculator;
-import org.junit.Assert;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+
+
 
 public class CalculatorTest {
 
@@ -18,13 +20,13 @@ public class CalculatorTest {
 
     @Test
     public void shouldReturnAccumulatorOfZeroWhenCreated() {
-        Assert.assertEquals(BigDecimal.ZERO, calculator.getAccumulator());
+        assertEquals(BigDecimal.ZERO, calculator.getAccumulator());
     }
 
     @Test
     public void shouldReturnSetAccumulatorValue() {
         BigDecimal value = new BigDecimal(23);
         calculator.setAccumulator(value);
-        Assert.assertEquals(value, calculator.getAccumulator());
+        assertEquals(value, calculator.getAccumulator());
     }
 }
