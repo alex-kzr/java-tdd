@@ -30,8 +30,15 @@ public class OperandStackTest {
     }
 
     @Test
-    public void shouldReturnNewValueAfterReplacingOldOne() {
+    public void shouldReturnNewValueAfterReplacingTop() {
         stack.push(new BigDecimal(22));
+        BigDecimal newValue = new BigDecimal(33);
+        stack.replaceTop(newValue);
+        assertEquals(newValue, stack.peek());
+    }
+
+    @Test
+    public void shouldReturnValueAfterReplacingTopOfEmptyStack() {
         BigDecimal newValue = new BigDecimal(33);
         stack.replaceTop(newValue);
         assertEquals(newValue, stack.peek());
