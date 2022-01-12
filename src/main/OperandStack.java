@@ -24,4 +24,7 @@ public class OperandStack {
         }
         values.push(value);
     }
+
+    public void pop() {
+    }
 }

@@ -43,4 +43,13 @@ public class OperandStackTest {
         stack.replaceTop(newValue);
         assertEquals(newValue, stack.peek());
     }
+
+    @Test
+    public void shouldReturnPreviousValueAfterPoppingValueFromStack() {
+        BigDecimal value = new BigDecimal(56);
+        stack.push(value);
+        stack.push(new BigDecimal(43));
+        stack.pop();
+        assertEquals(value, stack.peek());
+    }
 }
