@@ -26,6 +26,8 @@ public class OperandStack {
     }
 
     public void pop() {
-        values.pop();
+        if(values.size() > 0) {
+            values.pop();
+        }
     }
 }
