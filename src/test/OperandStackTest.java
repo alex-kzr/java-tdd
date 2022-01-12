@@ -28,4 +28,12 @@ public class OperandStackTest {
         stack.push(value);
         assertEquals(value, stack.peek());
     }
+
+    @Test
+    public void shouldReturnNewValueAfterReplacingOldOne() {
+        stack.push(new BigDecimal(22));
+        BigDecimal newValue = new BigDecimal(33);
+        stack.replaceTop(newValue);
+        assertEquals(newValue, stack.peek());
+    }
 }

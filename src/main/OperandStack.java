@@ -17,4 +17,7 @@ public class OperandStack {
     public void push(BigDecimal value) {
         values.push(value);
     }
+
+    public void replaceTop(BigDecimal newValue) {
+    }
 }
