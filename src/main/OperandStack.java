@@ -19,7 +19,9 @@ public class OperandStack {
     }
 
     public void replaceTop(BigDecimal value) {
-        values.pop();
+        if(values.size() > 0) {
+            values.pop();
+        }
         values.push(value);
     }
 }
