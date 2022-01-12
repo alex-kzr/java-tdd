@@ -6,4 +6,7 @@ public class Calculator {
     public BigDecimal getAccumulator() {
         return BigDecimal.ZERO;
     }
+
+    public void setAccumulator(BigDecimal value) {
+    }
 }
