@@ -52,4 +52,10 @@ public class OperandStackTest {
         stack.pop();
         assertEquals(value, stack.peek());
     }
+
+    @Test
+    public void shouldReturnZeroWhenPoppingEmptyStack() {
+        stack.pop();
+        assertEquals(BigDecimal.ZERO, stack.peek());
+    }
 }
