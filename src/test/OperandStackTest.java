@@ -21,4 +21,11 @@ public class OperandStackTest {
     public void shouldReturnZeroWhenNewOperandStackIsCreated(){
         assertEquals(BigDecimal.ZERO, stack.peek());
     }
+
+    @Test
+    public void shouldReturnValueAfterPushingItIntoStack() {
+        BigDecimal value = new BigDecimal(12);
+        stack.push(value);
+        assertEquals(value, stack.peek());
+    }
 }
