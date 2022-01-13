@@ -22,20 +22,15 @@ public class Calculator {
         accumulator.pop();
     }
 
-    public void add() {
-        Operation addOperation = new AddOperation();
-        addOperation.apply(accumulator);
-    }
-
-    public void subtract() {
-        Operation subtractOperation = new SubtractOperation();
-        subtractOperation.apply(accumulator);
-    }
-
     public void execute(String operator) {
+
+        Operation operation = null;
+
         if ("+".equals(operator))
-            add();
+            operation = new AddOperation();
         else if ("-".equals(operator))
-            subtract();
+            operation = new SubtractOperation();
+
+        operation.apply(accumulator);
     }
 }
