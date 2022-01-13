@@ -21,4 +21,7 @@ public class Calculator {
     public void drop() {
         accumulator.pop();
     }
+
+    public void add() {
+    }
 }
