@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 public class Calculator {
 
-    private OperandStack accumulator = new OperandStack();
+    private final OperandStack accumulator = new OperandStack();
 
     public BigDecimal getAccumulator() {
         return accumulator.peek();
