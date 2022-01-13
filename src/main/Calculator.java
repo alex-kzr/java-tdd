@@ -28,4 +28,7 @@ public class Calculator {
         BigDecimal value2 = accumulator.peek();
         accumulator.replaceTop(value1.add(value2));
     }
+
+    public void subtract() {
+    }
 }

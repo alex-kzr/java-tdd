@@ -24,4 +24,10 @@ public class OperationsTest {
         calculator.add();
         assertEquals(new BigDecimal(24), calculator.getAccumulator());
     }
+
+    @Test
+    public void shouldReturn16AfterSubtract() {
+        calculator.subtract();
+        assertEquals(new BigDecimal(16), calculator.getAccumulator());
+    }
 }
