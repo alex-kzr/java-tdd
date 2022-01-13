@@ -31,4 +31,7 @@ public class Calculator {
         Operation subtractOperation = new SubtractOperation();
         subtractOperation.apply(accumulator);
     }
+
+    public void execute(String s) {
+    }
 }

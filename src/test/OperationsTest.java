@@ -20,8 +20,14 @@ public class OperationsTest {
     };
 
     @Test
-    public void shouldReturn24AfterAdding() {
+    public void shouldReturn24AfterAddingUsingAddMethod() {
         calculator.add();
+        assertEquals(new BigDecimal(24), calculator.getAccumulator());
+    }
+
+    @Test
+    public void shouldReturn24AfterAddingUsingExecuteMethod() {
+        calculator.execute("+");
         assertEquals(new BigDecimal(24), calculator.getAccumulator());
     }
 
