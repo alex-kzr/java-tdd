@@ -23,10 +23,8 @@ public class Calculator {
     }
 
     public void add() {
-        BigDecimal value1 = accumulator.peek();
-        accumulator.pop();
-        BigDecimal value2 = accumulator.peek();
-        accumulator.replaceTop(value1.add(value2));
+        Operation addOperation = new AddOperation();
+        addOperation.apply(accumulator);
     }
 
     public void subtract() {
