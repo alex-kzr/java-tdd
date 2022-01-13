@@ -32,6 +32,7 @@ public class Calculator {
         subtractOperation.apply(accumulator);
     }
 
-    public void execute(String s) {
+    public void execute(String operator) {
+        add();
     }
 }
