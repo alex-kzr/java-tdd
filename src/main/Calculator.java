@@ -30,5 +30,9 @@ public class Calculator {
     }
 
     public void subtract() {
+        BigDecimal value1 = accumulator.peek();
+        accumulator.pop();
+        BigDecimal value2 = accumulator.peek();
+        accumulator.replaceTop(value2.subtract(value1));
     }
 }
