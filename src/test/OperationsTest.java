@@ -32,8 +32,14 @@ public class OperationsTest {
     }
 
     @Test
-    public void shouldReturn16AfterSubtract() {
+    public void shouldReturn16AfterSubtractUsingSubtractMethod() {
         calculator.subtract();
+        assertEquals(new BigDecimal(16), calculator.getAccumulator());
+    }
+
+    @Test
+    public void shouldReturn16AfterSubtractUsingExecuteMethod() {
+        calculator.execute("-");
         assertEquals(new BigDecimal(16), calculator.getAccumulator());
     }
 }
