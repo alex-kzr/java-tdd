@@ -33,6 +33,9 @@ public class Calculator {
     }
 
     public void execute(String operator) {
-        add();
+        if ("+".equals(operator))
+            add();
+        else if ("-".equals(operator))
+            subtract();
     }
 }
